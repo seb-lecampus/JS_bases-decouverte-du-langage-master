@@ -10,45 +10,52 @@
         <script type="text/javascript">
 
         /* Section 1 */   
+        
+        /* declaration de quelques variables global */
+        var name = "Joe";       // string
+        var city = 'London';    // string
+        var age = 32;           // int
+        var isRed = true;       // boolean
+        var isOld = age > 80;   // boolean
 
-        var name = "Joe";
-        var city = 'London';
-        var age = 32;
-        var isRed = true;
-        var isOld = age > 80;
+        var previousJobs = ['lawyer', 'developper', 'Professionnal climber']; // array
 
-        var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];
-
-        function info(height, weight) {
-            if (height > 180) {
-                console.log('Vous êtes grand');
+        /* declaration d'une fonction */
+        function info(height, weight) { // height et weight sont deux parametres
+            if (height > 180) {                             // SI height est strictement supérieur à 180
+                console.log('Vous êtes grand');             // écrit dans la console JS
             }
-            if (weight < 0) {
-                console.log('oups, there is a problem');
-            } else if ( weight < 15) {
-                console.log('Are you that slim ?')
-            } else {
-                console.log('Good !')
+                                                             //---------------------------------------- debut d'un autre bloc conditionel
+            if (weight < 0) {                                // SI weight est strictement inférieur à 0
+                console.log('oups, there is a problem');     // print
+            } else if ( weight < 15) {                       // SINON SI weight est strictement inférieur à 15
+                console.log('Are you that slim ?')           // print
+            } else {                                         // SINON dans tous les cas
+                console.log('Good !')                        // print
             }
+                                                        // La fonction ne retourne rien
         }
 
-        info(165, 45);
+        info(165, 45); // apelle la fonction info(int, int)
 
+        /* declaration de deux variable global */
         var myHeight = 175;
         var myWeight = 86;
 
-        info(myHeight, myWeight);
+        info(myHeight, myWeight); // call to info()
 
-        info(myHeight + 15, myWeight - 100);
+        info(myHeight + 15, myWeight - 100); // call to info()
 
+        /* définit la fonction toUpper() */
         function toUpper(variable) {
-            return variable.toUpperCase();
+            return variable.toUpperCase(); // execute  la methode .toUpperCase() de l'objet 'variable' passé en parametre, puis retourne la valeur de retour de la method .toUpperCase()
         }
 
-        var upperName = toUpper(name);
+        var upperName = toUpper(name);  // la variable vaut la valeur retourner par toUpper()
 
+        // boucle. initialise i à 0 puis, tant que i est strictement inferieur à 3 execute le code. A la fin de chaque itération i est incrémenté de 1
         for (i = 0; i < 3; i = i + 1) {
-            console.log(previousJobs[i]);
+            console.log(previousJobs[i]); // écrit dans la console JS, succesivement la valeur de l'élement 0, 1 et 2
         }
 
         /* Section 2: */
